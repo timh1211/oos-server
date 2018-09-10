@@ -1,0 +1,267 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{14895402-812A-4A13-A437-0F8931DDE572}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>OOS.Models</RootNamespace>
+    <AssemblyName>OOS.Models</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Linq.Dynamic, Version=1.0.6132.35681, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Linq.Dynamic.1.0.7\lib\net40\System.Linq.Dynamic.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Account.cs" />
+    <Compile Include="CartDetail.cs" />
+    <Compile Include="Common\BaseEntity.cs" />
+    <Compile Include="Category.cs" />
+    <Compile Include="Common\ICode.cs" />
+    <Compile Include="Common\ICreator.cs" />
+    <Compile Include="Common\IModifier.cs" />
+    <Compile Include="Common\IReview.cs" />
+    <Compile Include="Common\IStatus.cs" />
+    <Compile Include="Common\OOSContext.cs" />
+    <Compile Include="Contact.cs" />
+    <Compile Include="Customer.cs" />
+    <Compile Include="DigitalInformation.cs" />
+    <Compile Include="Employee.cs" />
+    <Compile Include="File.cs" />
+    <Compile Include="Image.cs" />
+    <Compile Include="Manufacturer.cs" />
+    <Compile Include="Migrations\201808011535027_ConnectDB.cs" />
+    <Compile Include="Migrations\201808011535027_ConnectDB.Designer.cs">
+      <DependentUpon>201808011535027_ConnectDB.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201808020425420_Add-Gender-CusAndEmp.cs" />
+    <Compile Include="Migrations\201808020425420_Add-Gender-CusAndEmp.Designer.cs">
+      <DependentUpon>201808020425420_Add-Gender-CusAndEmp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201808020704390_Edit-Context.cs" />
+    <Compile Include="Migrations\201808020704390_Edit-Context.Designer.cs">
+      <DependentUpon>201808020704390_Edit-Context.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201808030720258_Add-Virtual-For-All.cs" />
+    <Compile Include="Migrations\201808030720258_Add-Virtual-For-All.Designer.cs">
+      <DependentUpon>201808030720258_Add-Virtual-For-All.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201808030939351_Change-Status-bool.cs" />
+    <Compile Include="Migrations\201808030939351_Change-Status-bool.Designer.cs">
+      <DependentUpon>201808030939351_Change-Status-bool.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201808040616393_Add-AccountComplex.cs" />
+    <Compile Include="Migrations\201808040616393_Add-AccountComplex.Designer.cs">
+      <DependentUpon>201808040616393_Add-AccountComplex.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201808040706166_Add-Value-Status.cs" />
+    <Compile Include="Migrations\201808040706166_Add-Value-Status.Designer.cs">
+      <DependentUpon>201808040706166_Add-Value-Status.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201808050853557_Delete-Status-Value.cs" />
+    <Compile Include="Migrations\201808050853557_Delete-Status-Value.Designer.cs">
+      <DependentUpon>201808050853557_Delete-Status-Value.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201808051008242_Add-Owner-To-Account.cs" />
+    <Compile Include="Migrations\201808051008242_Add-Owner-To-Account.Designer.cs">
+      <DependentUpon>201808051008242_Add-Owner-To-Account.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201808070957184_Edit-Database001.cs" />
+    <Compile Include="Migrations\201808070957184_Edit-Database001.Designer.cs">
+      <DependentUpon>201808070957184_Edit-Database001.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201808080634046_Datetime-Null.cs" />
+    <Compile Include="Migrations\201808080634046_Datetime-Null.Designer.cs">
+      <DependentUpon>201808080634046_Datetime-Null.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201808080854512_Edit-Price-Type.cs" />
+    <Compile Include="Migrations\201808080854512_Edit-Price-Type.Designer.cs">
+      <DependentUpon>201808080854512_Edit-Price-Type.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201808190856033_add-ispay-order.cs" />
+    <Compile Include="Migrations\201808190856033_add-ispay-order.Designer.cs">
+      <DependentUpon>201808190856033_add-ispay-order.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201808190932493_edit-product001.cs" />
+    <Compile Include="Migrations\201808190932493_edit-product001.Designer.cs">
+      <DependentUpon>201808190932493_edit-product001.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201808201700108_change-product.cs" />
+    <Compile Include="Migrations\201808201700108_change-product.Designer.cs">
+      <DependentUpon>201808201700108_change-product.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201808221011045_add-contact.cs" />
+    <Compile Include="Migrations\201808221011045_add-contact.Designer.cs">
+      <DependentUpon>201808221011045_add-contact.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201808311706134_delete-gender.cs" />
+    <Compile Include="Migrations\201808311706134_delete-gender.Designer.cs">
+      <DependentUpon>201808311706134_delete-gender.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201809020636326_Big-Update-Product.cs" />
+    <Compile Include="Migrations\201809020636326_Big-Update-Product.Designer.cs">
+      <DependentUpon>201809020636326_Big-Update-Product.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201809020731030_Add-Date-To-Image.cs" />
+    <Compile Include="Migrations\201809020731030_Add-Date-To-Image.Designer.cs">
+      <DependentUpon>201809020731030_Add-Date-To-Image.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201809021748372_Add-table-CartDetail.cs" />
+    <Compile Include="Migrations\201809021748372_Add-table-CartDetail.Designer.cs">
+      <DependentUpon>201809021748372_Add-table-CartDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201809041714341_add-total.cs" />
+    <Compile Include="Migrations\201809041714341_add-total.Designer.cs">
+      <DependentUpon>201809041714341_add-total.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201809041718364_delete-total.cs" />
+    <Compile Include="Migrations\201809041718364_delete-total.Designer.cs">
+      <DependentUpon>201809041718364_delete-total.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201809041745426_edit-order.cs" />
+    <Compile Include="Migrations\201809041745426_edit-order.Designer.cs">
+      <DependentUpon>201809041745426_edit-order.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201809050845475_delete-CustomerId.cs" />
+    <Compile Include="Migrations\201809050845475_delete-CustomerId.Designer.cs">
+      <DependentUpon>201809050845475_delete-CustomerId.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201809051608032_edit-contact.cs" />
+    <Compile Include="Migrations\201809051608032_edit-contact.Designer.cs">
+      <DependentUpon>201809051608032_edit-contact.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Order.cs" />
+    <Compile Include="OrderDetail.cs" />
+    <Compile Include="Product.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Review.cs" />
+    <Compile Include="Supplier.cs" />
+    <Compile Include="SupplierDetail.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201808011535027_ConnectDB.resx">
+      <DependentUpon>201808011535027_ConnectDB.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201808020425420_Add-Gender-CusAndEmp.resx">
+      <DependentUpon>201808020425420_Add-Gender-CusAndEmp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201808020704390_Edit-Context.resx">
+      <DependentUpon>201808020704390_Edit-Context.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201808030720258_Add-Virtual-For-All.resx">
+      <DependentUpon>201808030720258_Add-Virtual-For-All.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201808030939351_Change-Status-bool.resx">
+      <DependentUpon>201808030939351_Change-Status-bool.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201808040616393_Add-AccountComplex.resx">
+      <DependentUpon>201808040616393_Add-AccountComplex.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201808040706166_Add-Value-Status.resx">
+      <DependentUpon>201808040706166_Add-Value-Status.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201808050853557_Delete-Status-Value.resx">
+      <DependentUpon>201808050853557_Delete-Status-Value.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201808051008242_Add-Owner-To-Account.resx">
+      <DependentUpon>201808051008242_Add-Owner-To-Account.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201808070957184_Edit-Database001.resx">
+      <DependentUpon>201808070957184_Edit-Database001.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201808080634046_Datetime-Null.resx">
+      <DependentUpon>201808080634046_Datetime-Null.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201808080854512_Edit-Price-Type.resx">
+      <DependentUpon>201808080854512_Edit-Price-Type.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201808190856033_add-ispay-order.resx">
+      <DependentUpon>201808190856033_add-ispay-order.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201808190932493_edit-product001.resx">
+      <DependentUpon>201808190932493_edit-product001.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201808201700108_change-product.resx">
+      <DependentUpon>201808201700108_change-product.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201808221011045_add-contact.resx">
+      <DependentUpon>201808221011045_add-contact.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201808311706134_delete-gender.resx">
+      <DependentUpon>201808311706134_delete-gender.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201809020636326_Big-Update-Product.resx">
+      <DependentUpon>201809020636326_Big-Update-Product.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201809020731030_Add-Date-To-Image.resx">
+      <DependentUpon>201809020731030_Add-Date-To-Image.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201809021748372_Add-table-CartDetail.resx">
+      <DependentUpon>201809021748372_Add-table-CartDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201809041714341_add-total.resx">
+      <DependentUpon>201809041714341_add-total.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201809041718364_delete-total.resx">
+      <DependentUpon>201809041718364_delete-total.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201809041745426_edit-order.resx">
+      <DependentUpon>201809041745426_edit-order.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201809050845475_delete-CustomerId.resx">
+      <DependentUpon>201809050845475_delete-CustomerId.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201809051608032_edit-contact.resx">
+      <DependentUpon>201809051608032_edit-contact.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\OOS.Utilities\OOS.Utilities.csproj">
+      <Project>{B6B2C3DB-AC4C-4C55-A9F5-C7C83197EB6C}</Project>
+      <Name>OOS.Utilities</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
